@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/dlt"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.geeknews.MainActivity">
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#df24248e" />
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_below="@id/toolbar_container"
+        android:id="@+id/flt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+ </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nv"
+        android:layout_gravity="left"
+        app:menu="@menu/menu"
+        app:itemTextColor="@color/txcolor"
+        app:headerLayout="@layout/drawer_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
